@@ -13,7 +13,7 @@ PV = "${LINUX_VERSION}+git${SRCPV}"
 
 SRCREV ?= "c6f52f1c79744c37bae3bdfb50f626f6317ccc3b"
 BRANCH ?= "debian/4.3.0-ntc-6"
-SRC_URI = "git://github.com/NextThingCo/CHIP-linux.git;protocol=git;branch=${BRANCH} \
+SRC_URI = "git://github.com/NextThingCo/CHIP-linux.git;protocol=https;branch=${BRANCH} \
            file://defconfig \
           "
 
