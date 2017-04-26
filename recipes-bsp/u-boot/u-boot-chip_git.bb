@@ -12,7 +12,9 @@ PV = "${UBOOT_VERSION}+git${SRCPV}"
 
 SRCREV ?= "854d5fcc641d8d8914c03a69d7172815d5b81a99"
 BRANCH ?= "chip/stable"
-SRC_URI = "git://github.com/NextThingCo/CHIP-u-boot.git;branch=${BRANCH}"
+SRC_URI = "git://github.com/NextThingCo/CHIP-u-boot.git;branch=${BRANCH} \
+           file://0001-Add-compiler-gcc6.h.patch;patch=1 \
+           file://0001-Fix-tools-build.patch;patch=1"
 S = "${WORKDIR}/git"
 
 do_compile_append() {
@@ -20,4 +22,3 @@ do_compile_append() {
 }
 
 COMPATIBLE_MACHINE = "chip"
-
